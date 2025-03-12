@@ -1,0 +1,44 @@
+header {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+}
+
+nav {
+    display: inline-block;
+    width: 80%;
+    align-items: left;
+    color: #fff;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+li {
+    
+    margin-right: 1rem;
+    font-size: 20px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+img {
+    width: 150px;
+}
+span {
+    display: inline-block;
+    width: auto;
+    padding: 0rem 1.5rem ;
+    margin: 0;
+    text-align: center;
+    background-color: #c0c0c0;
+}
