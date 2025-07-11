@@ -1,41 +1,95 @@
-.App {
-  text-align: center;
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
 }
 
-.App-logo {
-  height: 20vmin;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  pointer-events: none;
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+@keyframes logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+div .page{
+  display:flex;
+  width:100%;
+}
+
+form {
+  
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  color:#333;
+  width: 500px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  color: #333;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  margin: auto;
+  background-color: #333;
+  color: white;
+  padding: 10px 15px;
+  
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #777;
+}
+
+form .error {
+  font-size: 12px;
+  background-color: #fff;
+  display: block;
+  margin-bottom: 10px;
+  color:red;
+  text-align:right;
+  padding-right:12px;
 }
