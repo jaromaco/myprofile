@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import emailjs from '@emailjs/browser';
 
-const ContactForm = () => {
+const ContactForm = ({onSuccess, formRef }) => {
 
     const [ formData, setFormData ] = useState({
         nombre:'',
@@ -84,14 +84,22 @@ const ContactForm = () => {
                     },
                 );
             console.log('Formulario válido. Datos:', formData);
-        }
+            onSuccess()
+            setTimeout(()=>{
+                setFormData({nombre:'',
+                email:'',
+                asunto:'',
+                mensaje:'',})
+                }, 1000)
+            }
+            
     }
 
     
 
     return (
         <>
-            <form autoComplete="off" ref={formData} onSubmit={procesarSubmit}>
+            <form autoComplete="off" ref={formRef} onSubmit={procesarSubmit}>
                 <h2>Contáctanos</h2>
     
                 <label htmlFor="nombre">Nombre:</label>

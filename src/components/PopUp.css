@@ -1,0 +1,18 @@
+.popup {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  max-width: fit-content;
+  transform: translateX(-50%);
+  background: #f0f0f0;
+  padding: 20px;
+  border: 2px solid #aaa;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.popup-content button {
+  margin: 10px auto 0;
+  display: block;
+}
