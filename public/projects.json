@@ -1,0 +1,21 @@
+[
+    {
+    "title": "App de gestión",
+    "text":"",
+    "listgroup":["javascript", "react"],
+    "link":{"title":"Click", "url":"https://oikosgis.com"}
+    },
+    {
+    "title": "Visor GIS",
+    "text":"Para ver",
+    "listgroup":["javascript", "react", "leaflet"],
+    "link":{"title":"Click", "url":"https://oikosgis.com"}
+    },
+    {
+    "title": "Visor GIS",
+    "text":"Para ver",
+    "listgroup":["javascript", "react", "leaflet"],
+    "link":{"title":"Click", "url":"https://oikosgis.com"}
+    }
+  
+]
