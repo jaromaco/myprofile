@@ -15,7 +15,6 @@ export default function Contact () {
 
   return (
     <>
-      <h1>Contact</h1>
       <div className="page">
         <ContactForm onSuccess={handleFormSuccess}/>
         {showPopup &&

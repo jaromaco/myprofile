@@ -1,5 +1,13 @@
 h2 {
-  margin : auto;
+  margin : 1rem auto 2rem;
+  text-align: center
+  ;
+}
+
+hr {
+  width: 500px;
+  margin: auto;
+  padding: 1rem;
 }
 
 .card {
@@ -18,11 +26,11 @@ div .page{
 form {
   
   background-color: #fff;
-  padding: 20px;
+  padding: 2rem;
   border-radius: 5px;
   color:#333;
   width: 500px;
-  margin: auto;
+  margin: 3rem auto;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -75,3 +83,4 @@ form .error {
   padding: 20px;
   margin:auto;
 }
+

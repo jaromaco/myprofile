@@ -86,10 +86,12 @@ const ContactForm = ({onSuccess, formRef }) => {
             console.log('Formulario válido. Datos:', formData);
             onSuccess()
             setTimeout(()=>{
-                setFormData({nombre:'',
-                email:'',
-                asunto:'',
-                mensaje:'',})
+                setFormData({
+                    nombre:'',
+                    email:'',
+                    asunto:'',
+                    mensaje:'',
+                })
                 }, 1000)
             }
             
@@ -100,31 +102,31 @@ const ContactForm = ({onSuccess, formRef }) => {
     return (
         <>
             <form autoComplete="off" ref={formRef} onSubmit={procesarSubmit}>
-                <h2>Contáctanos</h2>
+                <h2>Contact us</h2>
     
-                <label htmlFor="nombre">Nombre:</label>
+                <label htmlFor="nombre">Name:</label>
                 <input type="text" id="nombre" name="nombre" value={formData.nombre} onChange={procesarCambio}/>
 
                 {formErrors.nombre && <span className="error"> {formErrors.nombre}</span>}
 
-                <label htmlFor="email">Correo electrónico:</label>
+                <label htmlFor="email">Email:</label>
                 <input type="email" id="email" name="email" value={formData.email} onChange={procesarCambio}/>
 
                 {formErrors.email && <span className="error"> {formErrors.email}</span>}
 
                 
-                <label htmlFor="asunto">Asunto:</label>
+                <label htmlFor="asunto">Subject:</label>
                 <input type="text" id="asunto" name="asunto" value={formData.asunto} onChange={procesarCambio}/>
 
                 {formErrors.asunto && <span className="error"> {formErrors.asunto}</span>}
 
                 
-                <label htmlFor="mensaje">Mensaje:</label>
+                <label htmlFor="mensaje">Message:</label>
                 <textarea id="mensaje" name="mensaje" value={formData.mensaje} rows="5" onChange={procesarCambio}></textarea>
 
                 {formErrors.mensaje && <span className="error"> {formErrors.mensaje}</span>}
 
-                <button type="submit">Enviar</button>
+                <button type="submit">Submit</button>
             </form>
         </>
     )

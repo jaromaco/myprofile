@@ -3,10 +3,10 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import Button from 'react-bootstrap/Button';
 
 // Las props se desestructuran directamente del objeto 'props'
-function PortfolioProject({ title, text, listgroup, link }) {
+function PortfolioProject({ icon ,title, text, listgroup, link }) {
   return (
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
+    <Card style={{ width: '18rem' }} >
+      <Card.Img variant="top" src={icon} />
       <Card.Body>
         <Card.Title>{title}</Card.Title>
         <Card.Text>

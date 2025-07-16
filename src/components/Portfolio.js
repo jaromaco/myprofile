@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import PortfolioProject from "./Card";
+import Title from "./Title"
 
 export default function Portfolio () {
 
@@ -14,13 +15,13 @@ export default function Portfolio () {
 
   return (
     <>
-      <h2>Portfolio</h2>
-      <div className="projects">
-        {data.map((item, index) => (
-        <PortfolioProject key= {index} title={item.title} text={item.text} listgroup={item.listgroup} link={item.link} />
-        )
-        )}
-      </div>
+        <Title title="Portfolio"/>
+        <div className="projects">
+          {data.map((item, index) => (
+          <PortfolioProject key= {index} icon = {item.icon}title={item.title} text={item.text} listgroup={item.listgroup} link={item.link} />
+          )
+          )}
+        </div>
     </>
   );
 }
