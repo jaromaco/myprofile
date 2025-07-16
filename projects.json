@@ -1,20 +1,23 @@
 [
     {
+    "icon" :"./gis-spatial-data.jpg",
     "title": "App de gestión",
     "text":"",
     "listgroup":["javascript", "react"],
     "link":{"title":"Click", "url":"https://oikosgis.com"}
     },
     {
+    "icon" :"./gis-spatial-data.jpg",
     "title": "Visor GIS",
     "text":"Para ver",
     "listgroup":["javascript", "react", "leaflet"],
-    "link":{"title":"Click", "url":"https://oikosgis.com"}
+    "link":{"title":"Click", "url":"https://jaromaco.github.io/"}
     },
     {
+    "icon" :"./gis-spatial-data.jpg",
     "title": "Visor GIS",
     "text":"Para ver",
-    "listgroup":["javascript", "react", "leaflet"],
+    "listgroup":["Python", "react", "leaflet"],
     "link":{"title":"Click", "url":"https://oikosgis.com"}
     }
   
