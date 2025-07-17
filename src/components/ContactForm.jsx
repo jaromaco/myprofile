@@ -58,7 +58,7 @@ const ContactForm = ({onSuccess, formRef }) => {
             setFormErrors(newFormErrors);
         }else{
             emailjs
-                .sendForm('service_11xginh', 'template_g5pei3s', formData.current, {
+                .sendForm('service_11xginh', 'template_g5pei3s', formRef.current, {
                     publicKey: 'EAJsh03wRkb24s6-Z',
                 })
                 .then(
@@ -66,13 +66,13 @@ const ContactForm = ({onSuccess, formRef }) => {
                         console.log('SUCCESS!');
                     },
                     (error) => {
-                        console.log('FAILED...', error.text);
+                        console.log('FAILED...', error);
                     },
                 );
             console.log('Formulario válido. Datos:', formData);
 
             emailjs
-                .sendForm('service_11xginh', 'template_gsewpfy', formData.current, {
+                .sendForm('service_11xginh', 'template_gsewpfy', formRef.current, {
                     publicKey: 'EAJsh03wRkb24s6-Z',
                 })
                 .then(
@@ -80,7 +80,7 @@ const ContactForm = ({onSuccess, formRef }) => {
                         console.log('SUCCESS!');
                     },
                     (error) => {
-                        console.log('FAILED...', error.text);
+                        console.log('FAILED...', error);
                     },
                 );
             console.log('Formulario válido. Datos:', formData);
