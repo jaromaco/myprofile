@@ -18,7 +18,7 @@ export default function Contact () {
 
   return (
     <>
-      <div className="page">
+      <div className="page form-contact">
         <ContactForm onSuccess={handleFormSuccess} formRef={formRef}/>
         {showPopup &&
           <PopUp msj="El mensaje fue recibido.lllNos pondremos en contacto con la mayor brevedad posible."

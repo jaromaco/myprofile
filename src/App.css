@@ -83,4 +83,14 @@ form .error {
   padding: 20px;
   margin:auto;
 }
+.form-contact{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+ 
+  margin: auto;
+}
 
+ul.navbar-nav .nav-link.active{
+  color: crimson
+}
