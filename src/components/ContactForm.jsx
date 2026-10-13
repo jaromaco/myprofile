@@ -1,135 +1,123 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { useLanguage } from '../i18n/LanguageContext';
 
-const ContactForm = ({onSuccess, formRef }) => {
+const SERVICE_ID = 'service_11xginh';
+const TEMPLATE_OWNER = 'template_g5pei3s';
+const TEMPLATE_ACK = 'template_gsewpfy';
+const PUBLIC_KEY = 'EAJsh03wRkb24s6-Z';
 
-    const [ formData, setFormData ] = useState({
-        nombre:'',
-        email:'',
-        asunto:'',
-        mensaje:'',
-    })
+export default function ContactForm({ onSuccess, formRef }) {
+  const { t, lang } = useLanguage();
+  const c = t.contact;
 
-    const [ formErrors, setFormErrors ] = useState({
-        nombre:'',
-        email:'',
-        asunto:'',
-        mensaje:'',
-    })
+  const [formData, setFormData] = useState({
+    nombre: '',
+    email: '',
+    asunto: '',
+    mensaje: '',
+  });
+  const [formErrors, setFormErrors] = useState({});
+  const [sending, setSending] = useState(false);
+  const [sendError, setSendError] = useState('');
 
-    const procesarCambio = (evento) =>{
+  useEffect(() => {
+    setFormErrors({});
+    setSendError('');
+  }, [lang]);
 
-        const { name, value } = evento.target;
-        setFormData((prevFormData)=>({
-            ...prevFormData,
-            [name] : value,
-        }))
+  const onChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+    setFormErrors((prev) => ({ ...prev, [name]: '' }));
+    setSendError('');
+  };
 
-        setFormErrors((prevFormErrors)=>({
-            ...prevFormErrors,
-            [name] : '',
-        }))
+  const validate = () => {
+    const next = {};
+    if (!formData.nombre.trim()) next.nombre = c.errors.name;
+    if (!formData.email.trim()) next.email = c.errors.email;
+    if (!formData.asunto.trim()) next.asunto = c.errors.subject;
+    if (!formData.mensaje.trim()) next.mensaje = c.errors.message;
+    return next;
+  };
 
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const next = validate();
+    if (Object.keys(next).length > 0) {
+      setFormErrors(next);
+      return;
     }
 
-    const procesarSubmit = (evento) => {
-        evento.preventDefault();
-        console.log(formData)
+    setSending(true);
+    setSendError('');
 
-        const newFormErrors ={};
-
-        if(formData.nombre.trim() === ''){
-            newFormErrors.nombre = 'El nombre es requerido.';
-        }
-
-        if(formData.email.trim() === ''){
-            newFormErrors.email = 'El email es requerido.';
-        }
-
-        if(formData.asunto.trim() === ''){
-            newFormErrors.asunto = 'El asunto es requerido.';
-        }
-
-        if(formData.mensaje.trim() === ''){
-            newFormErrors.mensaje = 'El mensaje es requerido.';
-        }
-
-        if (Object.keys(newFormErrors).length > 0) {
-            setFormErrors(newFormErrors);
-        }else{
-            emailjs
-                .sendForm('service_11xginh', 'template_g5pei3s', formRef.current, {
-                    publicKey: 'EAJsh03wRkb24s6-Z',
-                })
-                .then(
-                    () => {
-                        console.log('SUCCESS!');
-                    },
-                    (error) => {
-                        console.log('FAILED...', error);
-                    },
-                );
-            console.log('Formulario válido. Datos:', formData);
-
-            emailjs
-                .sendForm('service_11xginh', 'template_gsewpfy', formRef.current, {
-                    publicKey: 'EAJsh03wRkb24s6-Z',
-                })
-                .then(
-                    () => {
-                        console.log('SUCCESS!');
-                    },
-                    (error) => {
-                        console.log('FAILED...', error);
-                    },
-                );
-            console.log('Formulario válido. Datos:', formData);
-            onSuccess()
-            setTimeout(()=>{
-                setFormData({
-                    nombre:'',
-                    email:'',
-                    asunto:'',
-                    mensaje:'',
-                })
-                }, 1000)
-            }
-            
+    try {
+      await emailjs.sendForm(SERVICE_ID, TEMPLATE_OWNER, formRef.current, {
+        publicKey: PUBLIC_KEY,
+      });
+      await emailjs.sendForm(SERVICE_ID, TEMPLATE_ACK, formRef.current, {
+        publicKey: PUBLIC_KEY,
+      });
+      onSuccess();
+      setFormData({ nombre: '', email: '', asunto: '', mensaje: '' });
+    } catch {
+      setSendError(c.errorSend);
+    } finally {
+      setSending(false);
     }
+  };
 
-    
+  return (
+    <form className="contact-form" autoComplete="off" ref={formRef} onSubmit={onSubmit} noValidate>
+      <label htmlFor="nombre">{c.name}</label>
+      <input
+        type="text"
+        id="nombre"
+        name="nombre"
+        value={formData.nombre}
+        onChange={onChange}
+        autoComplete="name"
+      />
+      {formErrors.nombre ? <span className="field-error">{formErrors.nombre}</span> : null}
 
-    return (
-        <>
-            <form autoComplete="off" ref={formRef} onSubmit={procesarSubmit}>
-                <h2>Contact us</h2>
-    
-                <label htmlFor="nombre">Name:</label>
-                <input type="text" id="nombre" name="nombre" value={formData.nombre} onChange={procesarCambio}/>
+      <label htmlFor="email">{c.email}</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        value={formData.email}
+        onChange={onChange}
+        autoComplete="email"
+      />
+      {formErrors.email ? <span className="field-error">{formErrors.email}</span> : null}
 
-                {formErrors.nombre && <span className="error"> {formErrors.nombre}</span>}
+      <label htmlFor="asunto">{c.subject}</label>
+      <input
+        type="text"
+        id="asunto"
+        name="asunto"
+        value={formData.asunto}
+        onChange={onChange}
+      />
+      {formErrors.asunto ? <span className="field-error">{formErrors.asunto}</span> : null}
 
-                <label htmlFor="email">Email:</label>
-                <input type="email" id="email" name="email" value={formData.email} onChange={procesarCambio}/>
+      <label htmlFor="mensaje">{c.message}</label>
+      <textarea
+        id="mensaje"
+        name="mensaje"
+        value={formData.mensaje}
+        rows="5"
+        onChange={onChange}
+      />
+      {formErrors.mensaje ? <span className="field-error">{formErrors.mensaje}</span> : null}
 
-                {formErrors.email && <span className="error"> {formErrors.email}</span>}
+      {sendError ? <p className="form-error" role="alert">{sendError}</p> : null}
 
-                
-                <label htmlFor="asunto">Subject:</label>
-                <input type="text" id="asunto" name="asunto" value={formData.asunto} onChange={procesarCambio}/>
-
-                {formErrors.asunto && <span className="error"> {formErrors.asunto}</span>}
-
-                
-                <label htmlFor="mensaje">Message:</label>
-                <textarea id="mensaje" name="mensaje" value={formData.mensaje} rows="5" onChange={procesarCambio}></textarea>
-
-                {formErrors.mensaje && <span className="error"> {formErrors.mensaje}</span>}
-
-                <button type="submit">Submit</button>
-            </form>
-        </>
-    )
-};
-
-export default ContactForm;
+      <button type="submit" className="btn btn--primary" disabled={sending}>
+        {sending ? c.sending : c.submit}
+      </button>
+    </form>
+  );
+}

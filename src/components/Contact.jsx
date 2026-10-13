@@ -1,31 +1,30 @@
-import React, { useRef , useState } from "react";
-import ContactForm from "./ContactForm";
-import PopUp from "./PopUp";
+import React, { useRef, useState } from 'react';
+import ContactForm from './ContactForm';
+import PopUp from './PopUp';
+import { useLanguage } from '../i18n/LanguageContext';
+import './Contact.css';
 
-export default function Contact () {
-
-  const formRef = useRef()
-  
-  const [showPopup, setShowPopup] = useState(false)
-
-  const handleFormSuccess = () => {
-    setShowPopup(true);
-  };
-
-  const closePopup = () => {
-    setShowPopup(false);
-  };
+export default function Contact() {
+  const { t } = useLanguage();
+  const formRef = useRef(null);
+  const [showPopup, setShowPopup] = useState(false);
 
   return (
-    <>
-      <div className="page form-contact">
-        <ContactForm onSuccess={handleFormSuccess} formRef={formRef}/>
-        {showPopup &&
-          <PopUp msj="El mensaje fue recibido.lllNos pondremos en contacto con la mayor brevedad posible."
-            onClose={closePopup}
+    <section className="section contact" id={t.contact.id}>
+      <div className="section__inner contact__inner">
+        <header className="section__header">
+          <h2>{t.contact.title}</h2>
+          <p>{t.contact.intro}</p>
+        </header>
+        <ContactForm onSuccess={() => setShowPopup(true)} formRef={formRef} />
+        {showPopup ? (
+          <PopUp
+            title={t.contact.successTitle}
+            body={t.contact.successBody}
+            onClose={() => setShowPopup(false)}
           />
-        }
+        ) : null}
       </div>
-    </>
+    </section>
   );
 }

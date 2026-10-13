@@ -1,0 +1,59 @@
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1.25rem;
+}
+
+.projects__card {
+  border: 1px solid var(--line);
+  background: var(--paper);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow);
+}
+
+.projects__img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  background: var(--paper-deep);
+}
+
+.projects__body {
+  padding: 1.15rem 1.15rem 1.35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  flex: 1;
+}
+
+.projects__body h3 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.projects__body p {
+  margin: 0;
+  color: var(--ink-muted);
+  font-size: 0.95rem;
+}
+
+.projects__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.projects__tags li {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.2rem 0.45rem;
+  background: var(--paper-deep);
+  border: 1px solid var(--line);
+}
+
+.projects__body .btn {
+  margin-top: auto;
+  align-self: flex-start;
+}

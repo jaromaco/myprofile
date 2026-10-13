@@ -1,0 +1,32 @@
+.tools__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 1.25rem;
+}
+
+.tools__group {
+  border: 1px solid var(--line);
+  background: var(--paper);
+  padding: 1.2rem 1.15rem 1.35rem;
+}
+
+.tools__group h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.85rem;
+  color: var(--field);
+}
+
+.tools__group ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.tools__group li {
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 0.3rem 0.55rem;
+  border: 1px solid var(--line);
+  background: var(--paper-deep);
+  color: var(--ink);
+}

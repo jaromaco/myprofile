@@ -1,31 +1,46 @@
-import './App.css';
-import { BrowserRouter, Route, Routes} from 'react-router-dom';
-import Home from './components/Home';
-import About from './components/About';
-import Services from './components/Services';
-import Portfolio from './components/Portfolio';
-import Contact from './components/Contact';
-import Hero from './components/Hero';
+import React, { useCallback, useState } from 'react';
+import { LanguageProvider } from './i18n/LanguageContext';
 import Header from './components/Header';
+import Hero from './components/Hero';
+import Services from './components/Services';
+import Process from './components/Process';
+import Tools from './components/Tools';
+import Path from './components/Path';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
+import './App.css';
 
+function Landing() {
+  const [hasProjects, setHasProjects] = useState(false);
+  const onProjectsChange = useCallback((value) => {
+    setHasProjects(Boolean(value));
+  }, []);
+
+  return (
+    <>
+      <Header hasProjects={hasProjects} />
+      <main>
+        <Hero />
+        <Services />
+        <Process />
+        <Tools />
+        <Path />
+        <Projects onProjectsChange={onProjectsChange} />
+        <Contact />
+      </main>
+      <Footer />
+    </>
+  );
+}
 
 function App() {
   return (
-    <BrowserRouter>
-      <Header />
-      <div className='container'>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route index element={<Hero />} />
-        <Route path="about" element={<About />} />
-        <Route path="services" element={<Services />} />
-        <Route path="portfolio" element={<Portfolio />} />
-        <Route path="contact" element={<Contact />} />
-      </Routes>
+    <LanguageProvider>
+      <div className="app">
+        <Landing />
       </div>
-      <Footer/>
-    </BrowserRouter>
+    </LanguageProvider>
   );
 }
 
