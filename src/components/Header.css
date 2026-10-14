@@ -20,12 +20,60 @@
 }
 
 .site-header__brand {
-  font-family: var(--font-serif);
-  font-size: 1.25rem;
-  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
   color: var(--field);
   text-decoration: none;
-  letter-spacing: 0.02em;
+}
+
+.site-header__brand:hover .site-header__name {
+  color: var(--ink);
+}
+
+.site-header__brand:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 4px;
+}
+
+.site-header__mark {
+  width: 1.9rem;
+  height: 1.9rem;
+  flex: none;
+  overflow: visible;
+}
+
+.site-header__mark ellipse {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.35;
+}
+
+.site-header__mark-point {
+  fill: var(--orange);
+}
+
+.site-header__word {
+  display: inline-flex;
+  align-items: baseline;
+  line-height: 1;
+}
+
+.site-header__name {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.site-header__craft {
+  margin-left: 0.02rem;
+  margin-right: -0.04em;
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--orange);
 }
 
 .site-nav {

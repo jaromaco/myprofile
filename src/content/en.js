@@ -1,8 +1,8 @@
 const en = {
   meta: {
-    title: 'OikosGIS — Javier Roma Corrales, GIS expert',
+    title: 'GIS expert in Madrid — Javier Roma Corrales | OikosGIS',
     description:
-      'GIS expert in Madrid. Cartography, field data, ETL automation, viewers, imagery, photogrammetry and LiDAR. Freelance commissions.',
+      'GIS expert in Madrid since 2010. QGIS, ArcGIS, PostGIS and FME: cartography, field data, ETL, viewers and LiDAR. Freelance commissions.',
   },
   brand: 'OikosGIS',
   nav: {
@@ -22,7 +22,7 @@ const en = {
     name: 'Javier Roma Corrales',
     role: 'GIS expert',
     lead:
-      'Spatial data commissions: cartography, field capture, ETL and viewers. Based in Madrid with more than twenty years in GIS.',
+      'Cartography, spatial analysis, field data, ETL and viewers. I work with QGIS, PostGIS and Python, and with imagery, photointerpretation and LiDAR. Based in Madrid, in GIS since 2010.',
     cta: 'Tell me about the job',
     fiverrCta: 'Fiverr profile',
     coords: '40°25′N  3°42′W  ·  Madrid',
@@ -36,7 +36,7 @@ const en = {
       'Five kinds of work I take on. Say what you have and what you need to deliver; we set scope and tools from there.',
     items: [
       {
-        title: 'Analysis and cartography',
+        title: 'Spatial analysis and cartography',
         forWhom: 'For teams that need maps and spatial analysis ready to decide or operate.',
         deliverable: 'Layers, maps and analysis (including network) in the agreed format.',
         tools: 'QGIS, ArcGIS Pro, Network Analyst',
@@ -60,7 +60,7 @@ const en = {
         tools: 'Experience Builder, Dashboards, Maps SDK for JavaScript',
       },
       {
-        title: 'Imagery, photogrammetry and LiDAR',
+        title: 'Photointerpretation, photogrammetry and LiDAR',
         forWhom: 'For projects that start from satellite, photogrammetry or point clouds.',
         deliverable: 'Processing, derivatives and layers ready for analysis.',
         tools: 'Remote sensing, photogrammetry, LiDAR, spatial Python',
@@ -69,14 +69,14 @@ const en = {
   },
   process: {
     id: 'como-trabajo',
-    title: 'How I work a commission',
+    title: 'How I work',
     steps: [
       {
         title: 'Scope',
         text: 'You describe the problem, source data and delivery format. We agree what is in and what is out.',
       },
       {
-        title: 'Delivery work',
+        title: 'Execution',
         text: 'I use the tools that fit (Esri, QGIS, FME, PostGIS, Python). I share progress when it helps.',
       },
       {
@@ -119,10 +119,12 @@ const en = {
     id: 'trayectoria',
     title: 'Background',
     intro:
-      'Public roles only. No project metrics or confidential cases. More than twenty years working with geographic information.',
+      'I started in 2010 with ArcMap on an invasive species inventory in the Azores. I later took ArcMap courses and, during my degree, used QGIS on several assignments.',
     credential:
       'Registered professional no. 7126 · Official College of Graduates in Forestry Engineering',
     training: 'GIS Development Expert · Esri Spain',
+    master:
+      'Master’s in Geographic Information Systems, specialised in analysis · UNIGIS',
     roles: [
       { role: 'GIS Expert', org: 'Grupo EULEN', note: 'Current' },
       { role: 'GIS Analyst', org: 'DOTGIS', note: '' },

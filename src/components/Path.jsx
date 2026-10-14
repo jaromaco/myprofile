@@ -26,6 +26,7 @@ export default function Path() {
         </ul>
         <p className="path__meta">{path.credential}</p>
         <p className="path__meta">{path.training}</p>
+        <p className="path__meta">{path.master}</p>
       </div>
     </section>
   );

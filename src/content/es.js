@@ -1,8 +1,8 @@
 const es = {
   meta: {
-    title: 'OikosGIS — Javier Roma Corrales, experto GIS',
+    title: 'Experto GIS en Madrid — Javier Roma Corrales | OikosGIS',
     description:
-      'Experto GIS en Madrid. Cartografía, datos de campo, automatización ETL, visores y tratamiento de imagen, fotogrametría y LiDAR. Encargos freelance.',
+      'Experto GIS en Madrid desde 2010. QGIS, ArcGIS, PostGIS y FME: cartografía, datos de campo, ETL, visores y LiDAR. Encargos freelance.',
   },
   brand: 'OikosGIS',
   nav: {
@@ -22,7 +22,7 @@ const es = {
     name: 'Javier Roma Corrales',
     role: 'Experto GIS',
     lead:
-      'Encargos de datos espaciales: cartografía, toma de campo, ETL y visores. Trabajo desde Madrid con más de veinte años en GIS.',
+      'Cartografía, análisis espacial, datos de campo, ETL y visores. Trabajo con QGIS, PostGIS y Python, y con imagen, fotointerpretación y LiDAR. Desde Madrid, en GIS desde 2010.',
     cta: 'Cuéntame el encargo',
     fiverrCta: 'Perfil en Fiverr',
     coords: '40°25′N  3°42′W  ·  Madrid',
@@ -36,7 +36,7 @@ const es = {
       'Cinco tipos de trabajo que puedo asumir. Di qué tienes y qué necesitas entregar; ajustamos alcance y herramientas.',
     items: [
       {
-        title: 'Análisis y cartografía',
+        title: 'Análisis espacial y cartografía',
         forWhom: 'Para equipos que necesitan mapas y análisis espaciales listos para decidir u operar.',
         deliverable: 'Capas, mapas y análisis (incluida red) en formato acordado.',
         tools: 'QGIS, ArcGIS Pro, Network Analyst',
@@ -60,7 +60,7 @@ const es = {
         tools: 'Experience Builder, Dashboards, Maps SDK for JavaScript',
       },
       {
-        title: 'Imagen, fotogrametría y LiDAR',
+        title: 'Fotointerpretación, fotogrametría y LiDAR',
         forWhom: 'Para proyectos que parten de satélite, fotogrametría o nube de puntos.',
         deliverable: 'Tratamiento, derivados y capas listas para análisis.',
         tools: 'Teledetección, fotogrametría, LiDAR, Python espacial',
@@ -119,10 +119,12 @@ const es = {
     id: 'trayectoria',
     title: 'Trayectoria',
     intro:
-      'Cargos públicos. Sin cifras de proyecto ni casos confidenciales. Más de veinte años trabajando con información geográfica.',
+      'Empecé en 2010 con ArcMap, en un inventario de especies invasoras en las Azores. Después hice cursos de ArcMap y, en la carrera, usé QGIS en varios trabajos.',
     credential:
       'Colegiado nº 7126 · Colegio oficial de Graduados en Ingeniería Forestal',
     training: 'Experto en Desarrollo GIS · Esri España',
+    master:
+      'Máster en Sistemas de Información Geográfica, especializado en análisis · UNIGIS',
     roles: [
       { role: 'Experto GIS', org: 'Grupo EULEN', note: 'Actual' },
       { role: 'Analista GIS', org: 'DOTGIS', note: '' },
