@@ -30,12 +30,7 @@ export default function Header() {
     <header className="site-header">
       <div className="site-header__inner">
         <a className="site-header__brand" href="#inicio" aria-label={t.nav.home}>
-          <svg className="site-header__mark" viewBox="0 0 32 32" aria-hidden="true">
-            <ellipse cx="15" cy="18.4" rx="12" ry="8.4" />
-            <ellipse cx="16.4" cy="16.8" rx="7.3" ry="5" />
-            <ellipse cx="17.6" cy="15.4" rx="3.1" ry="2.15" />
-            <circle className="site-header__mark-point" cx="18.1" cy="14.8" r="1.35" />
-          </svg>
+        <a className="site-header__brand" href="#inicio">
           <span className="site-header__word">
             <span className="site-header__name">{name}</span>{hasCraft ? <span className="site-header__craft">{craft}</span> : null}
           </span>
