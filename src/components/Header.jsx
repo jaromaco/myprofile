@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
 import './Header.css';
 
-export default function Header({ hasProjects }) {
+export default function Header() {
   const { t, lang, setLang } = useLanguage();
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -19,17 +19,17 @@ export default function Header({ hasProjects }) {
 
   const links = [
     { href: `#${t.services.id}`, label: t.nav.services },
+    { href: `#${t.projects.id}`, label: t.nav.projects },
     { href: `#${t.process.id}`, label: t.nav.process },
     { href: `#${t.tools.id}`, label: t.nav.tools },
     { href: `#${t.path.id}`, label: t.nav.path },
-    ...(hasProjects ? [{ href: `#${t.projects.id}`, label: t.nav.projects }] : []),
     { href: `#${t.contact.id}`, label: t.nav.contact },
   ];
 
   return (
     <header className="site-header">
       <div className="site-header__inner">
-        <a className="site-header__brand" href="#inicio">
+        <a className="site-header__brand" href="#inicio" aria-label={t.nav.home}>
           <svg className="site-header__mark" viewBox="0 0 32 32" aria-hidden="true">
             <ellipse cx="15" cy="18.4" rx="12" ry="8.4" />
             <ellipse cx="16.4" cy="16.8" rx="7.3" ry="5" />
@@ -48,7 +48,7 @@ export default function Header({ hasProjects }) {
           aria-controls="site-nav"
           onClick={() => setMenuOpen((open) => !open)}
         >
-          <span className="visually-hidden">Menu</span>
+          <span className="visually-hidden">{t.nav.menu}</span>
           <span aria-hidden="true" />
           <span aria-hidden="true" />
           <span aria-hidden="true" />
@@ -66,23 +66,35 @@ export default function Header({ hasProjects }) {
           </ul>
 
           <div className="lang-switch" role="group" aria-label="Language">
-            <button
-              type="button"
+            <a
+              href="/"
+              hrefLang="es"
+              lang="es"
               className={lang === 'es' ? 'is-active' : ''}
-              onClick={() => setLang('es')}
-              aria-pressed={lang === 'es'}
+              aria-current={lang === 'es' ? 'true' : undefined}
+              onClick={(event) => {
+                event.preventDefault();
+                setLang('es');
+                setMenuOpen(false);
+              }}
             >
               {t.lang.es}
-            </button>
+            </a>
             <span aria-hidden="true">|</span>
-            <button
-              type="button"
+            <a
+              href="/en/"
+              hrefLang="en"
+              lang="en"
               className={lang === 'en' ? 'is-active' : ''}
-              onClick={() => setLang('en')}
-              aria-pressed={lang === 'en'}
+              aria-current={lang === 'en' ? 'true' : undefined}
+              onClick={(event) => {
+                event.preventDefault();
+                setLang('en');
+                setMenuOpen(false);
+              }}
             >
               {t.lang.en}
-            </button>
+            </a>
           </div>
         </nav>
       </div>

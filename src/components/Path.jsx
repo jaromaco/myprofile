@@ -24,9 +24,7 @@ export default function Path() {
             </li>
           ))}
         </ul>
-        <p className="path__meta">{path.credential}</p>
-        <p className="path__meta">{path.training}</p>
-        <p className="path__meta">{path.master}</p>
+        <p className="path__meta">{path.education}</p>
       </div>
     </section>
   );

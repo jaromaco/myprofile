@@ -11,7 +11,7 @@ export default function Services() {
       <div className="section__inner">
         <header className="section__header">
           <h2>{services.title}</h2>
-          <p>{services.intro}</p>
+          {services.intro ? <p>{services.intro}</p> : null}
         </header>
         <ul className="services__list">
           {services.items.map((item) => (
@@ -23,6 +23,7 @@ export default function Services() {
             </li>
           ))}
         </ul>
+        {services.note ? <p className="services__note">{services.note}</p> : null}
       </div>
     </section>
   );

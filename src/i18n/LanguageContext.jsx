@@ -1,52 +1,44 @@
 import React, { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import es from '../content/es';
 import en from '../content/en';
+import { applyHead } from '../seo/applyHead';
+import { langFromPath } from '../seo/site';
 
-const STORAGE_KEY = 'oikosgis-lang';
 const catalogs = { es, en };
 
 const LanguageContext = createContext(null);
 
-function readStoredLang() {
-  try {
-    const stored = localStorage.getItem(STORAGE_KEY);
-    if (stored === 'en' || stored === 'es') return stored;
-  } catch {
-    /* ignore */
-  }
-  return 'es';
-}
-
 export function LanguageProvider({ children }) {
-  const [lang, setLangState] = useState(readStoredLang);
+  const [pathname, setPathname] = useState(() => window.location.pathname);
+  const lang = langFromPath(pathname);
+  const t = catalogs[lang] || catalogs.es;
+
+  useEffect(() => {
+    const sync = () => setPathname(window.location.pathname);
+    window.addEventListener('popstate', sync);
+    return () => window.removeEventListener('popstate', sync);
+  }, []);
 
   const setLang = useCallback((next) => {
     if (next !== 'es' && next !== 'en') return;
-    setLangState(next);
-    try {
-      localStorage.setItem(STORAGE_KEY, next);
-    } catch {
-      /* ignore */
-    }
+    const path = next === 'en' ? '/en/' : '/';
+    if (window.location.pathname === path) return;
+    window.history.pushState({}, '', `${path}${window.location.hash}`);
+    setPathname(path);
   }, []);
 
-  const toggleLang = useCallback(() => {
-    setLang(lang === 'es' ? 'en' : 'es');
-  }, [lang, setLang]);
-
-  const t = useMemo(() => catalogs[lang] || catalogs.es, [lang]);
+  useEffect(() => {
+    if (lang === 'en' && window.location.pathname !== '/en/') {
+      window.history.replaceState({}, '', `/en/${window.location.hash}`);
+      setPathname('/en/');
+    }
+  }, [lang]);
 
   useEffect(() => {
-    document.documentElement.lang = lang;
-    document.title = t.meta.title;
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.setAttribute('content', t.meta.description);
+    applyHead(t, lang);
   }, [lang, t]);
 
-  const value = useMemo(
-    () => ({ lang, setLang, toggleLang, t }),
-    [lang, setLang, toggleLang, t]
-  );
+  const value = useMemo(() => ({ lang, setLang, t }), [lang, setLang, t]);
 
   return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;
 }

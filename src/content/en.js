@@ -1,17 +1,19 @@
 const en = {
   meta: {
-    title: 'GIS expert in Madrid — Javier Roma Corrales | OikosGIS',
+    title: 'Geospatial Data Engineer — Javier Roma Corrales | OikosGIS',
     description:
-      'GIS expert in Madrid since 2010. QGIS, ArcGIS, PostGIS and FME: cartography, field data, ETL, viewers and LiDAR. Freelance commissions.',
+      'Geospatial Data Engineer. I automate, clean and load your geospatial data with FME, PostGIS and AWS. I work remotely from Madrid, Spain, in GIS since 2010.',
   },
   brand: 'OikosGIS',
   nav: {
-    services: 'Services',
+    services: 'What I do',
+    projects: 'Project',
     process: 'How I work',
     tools: 'Tools',
     path: 'Background',
-    projects: 'Work',
     contact: 'Contact',
+    home: 'OikosGIS, home',
+    menu: 'Menu',
   },
   lang: {
     es: 'ES',
@@ -19,53 +21,52 @@ const en = {
     switchTo: 'Español',
   },
   hero: {
-    name: 'Javier Roma Corrales',
-    role: 'GIS expert',
+    eyebrow: 'Geospatial Data Engineer',
+    title: 'I automate and organise your geospatial data',
     lead:
-      'Cartography, spatial analysis, field data, ETL and viewers. I work with QGIS, PostGIS and Python, and with imagery, photointerpretation and LiDAR. Based in Madrid, in GIS since 2010.',
-    cta: 'Tell me about the job',
-    fiverrCta: 'Fiverr profile',
-    coords: '40°25′N  3°42′W  ·  Madrid',
+      'ETL pipelines with FME and Python, PostGIS databases and data in the cloud (AWS). For teams that currently load, convert or clean data by hand. Remote from Madrid, in GIS since 2010.',
+    name: 'Javier Roma Corrales',
+    cta: 'Tell me about your case',
+    projectCta: 'See project',
   },
-  /** Paste a real Fiverr profile URL when ready. Empty = CTA hidden. */
-  fiverrUrl: '',
   services: {
     id: 'encargos',
-    title: 'Services',
-    intro:
-      'Five kinds of work I take on. Say what you have and what you need to deliver; we set scope and tools from there.',
+    title: 'What I do',
     items: [
       {
-        title: 'Spatial analysis and cartography',
-        forWhom: 'For teams that need maps and spatial analysis ready to decide or operate.',
-        deliverable: 'Layers, maps and analysis (including network) in the agreed format.',
-        tools: 'QGIS, ArcGIS Pro, Network Analyst',
+        title: 'Spatial ETL and automation',
+        forWhom: 'For anyone repeating loads or joining sources by hand.',
+        deliverable:
+          'Pipelines that download, transform, validate and load spatial data, in formats such as shapefile, GML, CAD, GeoJSON, GeoPackage and GeoParquet.',
+        tools: 'Tools: FME, Python, SQL.',
       },
       {
-        title: 'Field data',
-        forWhom: 'For anyone collecting information outdoors and needing it clean in the system.',
-        deliverable: 'Forms, field layers and sync workflows.',
-        tools: 'Survey123, Field Maps, QField',
+        title: 'Spatial databases and cloud',
+        forWhom: 'For anyone who needs a single reliable data source.',
+        deliverable:
+          'PostGIS design and loading, with schemas, indexes and quality control, and data in S3 ready to query.',
+        tools: 'Tools: PostGIS, AWS (S3, Lambda), GeoParquet.',
       },
       {
-        title: 'Automation and ETL',
-        forWhom: 'For anyone still moving or joining spatial sources by hand.',
-        deliverable: 'Pipelines that transform, validate and load spatial data.',
-        tools: 'FME, Python, PostGIS',
-      },
-      {
-        title: 'Viewers and dashboards',
-        forWhom: 'For anyone who needs to query the data without opening a desktop GIS.',
-        deliverable: 'Web apps, panels and interactive views.',
-        tools: 'Experience Builder, Dashboards, Maps SDK for JavaScript',
-      },
-      {
-        title: 'Photointerpretation, photogrammetry and LiDAR',
-        forWhom: 'For projects that start from satellite, photogrammetry or point clouds.',
-        deliverable: 'Processing, derivatives and layers ready for analysis.',
-        tools: 'Remote sensing, photogrammetry, LiDAR, spatial Python',
+        title: 'Connected field data',
+        forWhom: 'For anyone collecting data in the field and needing it clean in the system.',
+        deliverable:
+          'QField and Survey123 projects connected to the database, with forms, validation and synchronisation.',
+        tools: 'Tools: QField, QGIS, Survey123, Field Maps.',
       },
     ],
+    note: 'I also do cartography, web viewers and imagery and LiDAR processing when they are part of a data project.',
+  },
+  projects: {
+    id: 'proyecto',
+    title: 'Project',
+    name: 'spain-flood-exposure: flood exposure in Valencia',
+    text:
+      'A Python and AWS pipeline that downloads public data from the Cadastre and the INE, stores it in a data lake on S3 and converts it to GeoParquet to cross-reference buildings and population with flood zones.',
+    facts:
+      'Ingestion Lambdas with least-privilege permissions and tests · 266 municipalities · 1,830 census sections.',
+    linkLabel: 'See spain-flood-exposure on GitHub',
+    linkUrl: 'https://github.com/jaromaco/spain-flood-exposure',
   },
   process: {
     id: 'como-trabajo',
@@ -73,45 +74,38 @@ const en = {
     steps: [
       {
         title: 'Scope',
-        text: 'You describe the problem, source data and delivery format. We agree what is in and what is out.',
+        text: 'You tell me what data you have and what you need to deliver. We put it in writing: what is in, what is out, and the deadline.',
       },
       {
         title: 'Execution',
-        text: 'I use the tools that fit (Esri, QGIS, FME, PostGIS, Python). I share progress when it helps.',
+        text: 'I use the tools that fit your environment. I show you progress at the points we agree.',
       },
       {
-        title: 'Handoff',
-        text: 'You get layers, maps, scripts or apps as agreed, with enough notes to use or maintain them.',
+        title: 'Delivery',
+        text: 'You receive the data, and also the documented scripts or FME workspaces, so the process can be repeated without me.',
       },
     ],
   },
   tools: {
     id: 'herramientas',
     title: 'Tools',
-    intro: 'What I use day to day. Chosen for the client environment, not for fashion.',
+    intro: 'I adapt to the tools you already use.',
     groups: [
       {
-        label: 'Desktop',
-        items: ['QGIS', 'ArcGIS Pro', 'Network Analyst'],
-      },
-      {
-        label: 'Field',
-        items: ['Survey123', 'Field Maps', 'QField'],
-      },
-      {
         label: 'Data and automation',
-        items: ['PostGIS', 'FME', 'Python', 'ArcPy', 'PyQGIS', 'ArcGIS API for Python'],
+        items: ['FME', 'Python', 'SQL', 'PostGIS', 'GeoPandas'],
+      },
+      {
+        label: 'Cloud',
+        items: ['AWS (S3, Lambda, Glue, Athena)', 'GeoParquet'],
+      },
+      {
+        label: 'Desktop and field',
+        items: ['QGIS', 'ArcGIS Pro', 'QField', 'Survey123', 'Field Maps'],
       },
       {
         label: 'Web and imagery',
-        items: [
-          'Experience Builder',
-          'Dashboards',
-          'Maps SDK for JavaScript',
-          'Remote sensing',
-          'Photogrammetry',
-          'LiDAR',
-        ],
+        items: ['Experience Builder', 'Dashboards', 'Remote sensing', 'LiDAR'],
       },
     ],
   },
@@ -119,30 +113,21 @@ const en = {
     id: 'trayectoria',
     title: 'Background',
     intro:
-      'I started in 2010 with ArcMap on an invasive species inventory in the Azores. I later took ArcMap courses and, during my degree, used QGIS on several assignments.',
-    credential:
-      'Registered professional no. 7126 · Official College of Graduates in Forestry Engineering',
-    training: 'GIS Development Expert · Esri Spain',
-    master:
-      'Master’s in Geographic Information Systems, specialised in analysis · UNIGIS',
+      'In GIS since 2010, when I started with an invasive species inventory in the Azores. Since then I have moved from making maps to automating the data behind them.',
     roles: [
-      { role: 'GIS Expert', org: 'Grupo EULEN', note: 'Current' },
-      { role: 'GIS Analyst', org: 'DOTGIS', note: '' },
+      { role: 'GIS expert', org: 'Grupo EULEN', note: 'Current' },
+      { role: 'GIS analyst', org: 'DOTGIS', note: '' },
       { role: 'Photointerpretation operator', org: 'Tragsatec', note: '' },
       { role: 'GIS technician', org: 'TECNIGRAL', note: '' },
     ],
-  },
-  projects: {
-    id: 'trabajos',
-    title: 'Work',
-    intro: 'Pieces I can show in public.',
-    openLink: 'Open',
+    education:
+      'Master’s in GIS (UNIGIS) · GIS Development Expert (Esri Spain) · AWS Certified Data Engineer (in progress) · Registered professional no. 7126, Official College of Graduates in Forestry Engineering.',
   },
   contact: {
     id: 'contacto',
     title: 'Contact',
     intro:
-      'Describe the job: what data you have, what you need delivered, and any deadline. I reply by email.',
+      'Tell me what data you have, what you want to achieve and by when. I work remotely and reply in writing.',
     name: 'Name',
     email: 'Email',
     subject: 'Subject',
@@ -159,6 +144,19 @@ const en = {
     successBody: 'I will get back to you as soon as I can.',
     errorSend: 'Could not send. Try again or email me directly.',
     close: 'Close',
+    formNote: 'JavaScript is required to use the contact form on this site.',
+    links: [
+      {
+        label: 'Javier Roma Corrales on LinkedIn',
+        url: 'https://www.linkedin.com/in/javier-roma-geospatial-engineer',
+        rel: 'me noreferrer',
+      },
+      {
+        label: 'jaromaco on GitHub',
+        url: 'https://github.com/jaromaco',
+        rel: 'me noreferrer',
+      },
+    ],
   },
   footer: {
     copy: '© {year} Javier Roma Corrales · OikosGIS',
