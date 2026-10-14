@@ -108,16 +108,17 @@
   color: var(--ink-muted);
 }
 
-.lang-switch button {
+.lang-switch a {
   background: none;
   border: none;
   padding: 0.2rem;
   color: var(--ink-muted);
   cursor: pointer;
   font-weight: 700;
+  text-decoration: none;
 }
 
-.lang-switch button.is-active {
+.lang-switch a.is-active {
   color: var(--orange);
 }
 

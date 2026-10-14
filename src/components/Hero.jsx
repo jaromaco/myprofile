@@ -4,32 +4,22 @@ import './Hero.css';
 
 export default function Hero() {
   const { t } = useLanguage();
-  const showFiverr = Boolean(t.fiverrUrl);
 
   return (
     <section className="hero" id="inicio">
       <div className="hero__grid" aria-hidden="true" />
       <div className="hero__content">
-        <p className="hero__coords">{t.hero.coords}</p>
-        <h1 className="hero__heading">
-          <span className="hero__role">{t.hero.role}</span>
-          <span className="hero__name">{t.hero.name}</span>
-        </h1>
+        <p className="hero__role">{t.hero.eyebrow}</p>
+        <h1 className="hero__heading">{t.hero.title}</h1>
         <p className="hero__lead">{t.hero.lead}</p>
+        <p className="hero__person">{t.hero.name}</p>
         <div className="hero__actions">
           <a className="btn btn--primary" href={`#${t.contact.id}`}>
             {t.hero.cta}
           </a>
-          {showFiverr && (
-            <a
-              className="btn btn--ghost"
-              href={t.fiverrUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {t.hero.fiverrCta}
-            </a>
-          )}
+          <a className="btn btn--ghost" href={`#${t.projects.id}`}>
+            {t.hero.projectCta}
+          </a>
         </div>
       </div>
     </section>

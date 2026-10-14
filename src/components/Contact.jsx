@@ -17,6 +17,15 @@ export default function Contact() {
           <p>{t.contact.intro}</p>
         </header>
         <ContactForm onSuccess={() => setShowPopup(true)} formRef={formRef} />
+        <ul className="contact__links">
+          {t.contact.links.map((link) => (
+            <li key={link.url}>
+              <a href={link.url} target="_blank" rel="me noreferrer">
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
         {showPopup ? (
           <PopUp
             title={t.contact.successTitle}

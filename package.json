@@ -22,7 +22,9 @@
     "predeploy": "npm run build && echo oikosgis.com > ./build/CNAME",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
+    "prebuild": "node scripts/inject-static.mjs public",
     "build": "react-scripts build",
+    "postbuild": "node scripts/inject-static.mjs build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
 import './Header.css';
 
-export default function Header({ hasProjects }) {
+export default function Header() {
   const { t, lang, setLang } = useLanguage();
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -19,16 +19,17 @@ export default function Header({ hasProjects }) {
 
   const links = [
     { href: `#${t.services.id}`, label: t.nav.services },
+    { href: `#${t.projects.id}`, label: t.nav.projects },
     { href: `#${t.process.id}`, label: t.nav.process },
     { href: `#${t.tools.id}`, label: t.nav.tools },
     { href: `#${t.path.id}`, label: t.nav.path },
-    ...(hasProjects ? [{ href: `#${t.projects.id}`, label: t.nav.projects }] : []),
     { href: `#${t.contact.id}`, label: t.nav.contact },
   ];
 
   return (
     <header className="site-header">
       <div className="site-header__inner">
+        <a className="site-header__brand" href="#inicio" aria-label={t.nav.home}>
         <a className="site-header__brand" href="#inicio">
           <span className="site-header__word">
             <span className="site-header__name">{name}</span>{hasCraft ? <span className="site-header__craft">{craft}</span> : null}
@@ -42,7 +43,7 @@ export default function Header({ hasProjects }) {
           aria-controls="site-nav"
           onClick={() => setMenuOpen((open) => !open)}
         >
-          <span className="visually-hidden">Menu</span>
+          <span className="visually-hidden">{t.nav.menu}</span>
           <span aria-hidden="true" />
           <span aria-hidden="true" />
           <span aria-hidden="true" />
@@ -60,23 +61,35 @@ export default function Header({ hasProjects }) {
           </ul>
 
           <div className="lang-switch" role="group" aria-label="Language">
-            <button
-              type="button"
+            <a
+              href="/"
+              hrefLang="es"
+              lang="es"
               className={lang === 'es' ? 'is-active' : ''}
-              onClick={() => setLang('es')}
-              aria-pressed={lang === 'es'}
+              aria-current={lang === 'es' ? 'true' : undefined}
+              onClick={(event) => {
+                event.preventDefault();
+                setLang('es');
+                setMenuOpen(false);
+              }}
             >
               {t.lang.es}
-            </button>
+            </a>
             <span aria-hidden="true">|</span>
-            <button
-              type="button"
+            <a
+              href="/en/"
+              hrefLang="en"
+              lang="en"
               className={lang === 'en' ? 'is-active' : ''}
-              onClick={() => setLang('en')}
-              aria-pressed={lang === 'en'}
+              aria-current={lang === 'en' ? 'true' : undefined}
+              onClick={(event) => {
+                event.preventDefault();
+                setLang('en');
+                setMenuOpen(false);
+              }}
             >
               {t.lang.en}
-            </button>
+            </a>
           </div>
         </nav>
       </div>

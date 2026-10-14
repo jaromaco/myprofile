@@ -5,6 +5,7 @@
 }
 
 .projects__card {
+  max-width: 42rem;
   border: 1px solid var(--line);
   background: var(--paper);
   overflow: hidden;
@@ -37,6 +38,11 @@
   margin: 0;
   color: var(--ink-muted);
   font-size: 0.95rem;
+}
+
+.projects__facts {
+  font-weight: 600;
+  color: var(--ink) !important;
 }
 
 .projects__tags {
