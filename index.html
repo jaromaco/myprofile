@@ -1,63 +1,344 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"/><link rel="icon" href="/icon.ico"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#243f34"/><meta name="description" content="Experto GIS en Madrid desde 2010. QGIS, ArcGIS, PostGIS y FME: cartografía, datos de campo, ETL, visores y LiDAR. Encargos freelance."/><link rel="canonical" href="https://oikosgis.com/"/><meta property="og:type" content="website"/><meta property="og:url" content="https://oikosgis.com/"/><meta property="og:title" content="Experto GIS en Madrid — Javier Roma Corrales | OikosGIS"/><meta property="og:description" content="Experto GIS en Madrid desde 2010. QGIS, ArcGIS, PostGIS y FME: cartografía, datos de campo, ETL, visores y LiDAR. Encargos freelance."/><meta property="og:locale" content="es_ES"/><meta property="og:site_name" content="OikosGIS"/><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Experto GIS en Madrid — Javier Roma Corrales | OikosGIS"/><meta name="twitter:description" content="Experto GIS en Madrid desde 2010. QGIS, ArcGIS, PostGIS y FME: cartografía, datos de campo, ETL, visores y LiDAR. Encargos freelance."/><link rel="apple-touch-icon" href="/logo192.png"/><link rel="manifest" href="/manifest.json"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet"/><title>Experto GIS en Madrid — Javier Roma Corrales | OikosGIS</title><script type="application/ld+json">{
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Javier Roma Corrales",
-        "jobTitle": "Experto GIS",
-        "url": "https://oikosgis.com/",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Madrid",
-          "addressCountry": "ES"
-        },
-        "worksFor": {
-          "@type": "Organization",
-          "name": "Grupo EULEN"
-        },
-        "knowsLanguage": ["es", "en"],
-        "knowsAbout": [
-          "QGIS",
-          "ArcGIS",
-          "ArcGIS Pro",
-          "PostGIS",
-          "FME",
-          "QField",
-          "Python",
-          "Cartografía",
-          "Análisis espacial",
-          "Datos de campo",
-          "ETL",
-          "Teledetección",
-          "Fotogrametría",
-          "Fotointerpretación",
-          "LiDAR"
-        ],
-        "hasCredential": [
-          {
-            "@type": "EducationalOccupationalCredential",
-            "name": "Experto en Desarrollo GIS",
-            "credentialCategory": "certificate",
-            "recognizedBy": {
-              "@type": "Organization",
-              "name": "Esri España"
-            }
-          },
-          {
-            "@type": "EducationalOccupationalCredential",
-            "name": "Máster en Sistemas de Información Geográfica, especializado en análisis",
-            "credentialCategory": "degree",
-            "recognizedBy": {
-              "@type": "Organization",
-              "name": "UNIGIS"
-            }
-          },
-          {
-            "@type": "EducationalOccupationalCredential",
-            "name": "Colegiado nº 7126",
-            "credentialCategory": "ProfessionalLicense",
-            "recognizedBy": {
-              "@type": "Organization",
-              "name": "Colegio oficial de Graduados en Ingeniería Forestal"
-            }
+<!doctype html><html lang="es"><head><meta charset="utf-8"/><link rel="icon" href="/icon.ico"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#243f34"/><meta name="oikosgis" content="seo-start"/>
+    <meta name="description" content="Data Engineer geoespacial, GIS Madrid. Automatizo, limpio y cargo tus datos GIS con ETL FME y Python, PostGIS y AWS. Trabajo en remoto, en GIS desde 2010." />
+    <link rel="canonical" href="https://oikosgis.com/" />
+    <link rel="alternate" hreflang="es" href="https://oikosgis.com/" />
+    <link rel="alternate" hreflang="en" href="https://oikosgis.com/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://oikosgis.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://oikosgis.com/" />
+    <meta property="og:title" content="Data Engineer geoespacial — Javier Roma Corrales | OikosGIS" />
+    <meta property="og:description" content="Data Engineer geoespacial, GIS Madrid. Automatizo, limpio y cargo tus datos GIS con ETL FME y Python, PostGIS y AWS. Trabajo en remoto, en GIS desde 2010." />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:locale:alternate" content="en_GB" />
+    <meta property="og:site_name" content="OikosGIS" />
+    <meta property="og:image" content="https://oikosgis.com/gis-spatial-data.jpg" />
+    <meta property="og:image:alt" content="Cartel de OikosGIS con un mapa, una cuadrícula, curvas de nivel y el texto GIS &amp; Spatial Data." />
+    <meta property="og:image:width" content="1470" />
+    <meta property="og:image:height" content="980" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Data Engineer geoespacial — Javier Roma Corrales | OikosGIS" />
+    <meta name="twitter:description" content="Data Engineer geoespacial, GIS Madrid. Automatizo, limpio y cargo tus datos GIS con ETL FME y Python, PostGIS y AWS. Trabajo en remoto, en GIS desde 2010." />
+    <meta name="twitter:image" content="https://oikosgis.com/gis-spatial-data.jpg" />
+    <meta name="twitter:image:alt" content="Cartel de OikosGIS con un mapa, una cuadrícula, curvas de nivel y el texto GIS &amp; Spatial Data." />
+    <title>Data Engineer geoespacial — Javier Roma Corrales | OikosGIS</title>
+    <script type="application/ld+json" id="seo-jsonld">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://oikosgis.com/#javier-roma",
+      "name": "Javier Roma Corrales",
+      "jobTitle": "Data Engineer geoespacial",
+      "url": "https://oikosgis.com/",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Madrid",
+        "addressCountry": "ES"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/javier-roma-geospatial-engineer",
+        "https://github.com/jaromaco"
+      ],
+      "knowsLanguage": [
+        "es",
+        "en"
+      ],
+      "knowsAbout": [
+        "ETL espacial",
+        "FME",
+        "Python",
+        "SQL",
+        "PostGIS",
+        "GeoPandas",
+        "AWS (S3, Lambda, Glue, Athena)",
+        "GeoParquet",
+        "QGIS",
+        "ArcGIS Pro",
+        "QField",
+        "Survey123",
+        "Field Maps",
+        "Experience Builder",
+        "Dashboards",
+        "teledetección",
+        "LiDAR"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Grupo EULEN"
+      },
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Máster en SIG",
+          "credentialCategory": "degree",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "UNIGIS"
           }
-        ]
-      }</script><script defer="defer" src="/static/js/main.9c3cdca0.js"></script><link href="/static/css/main.2f928ffc.css" rel="stylesheet"></head><body><noscript><main><h1>Experto GIS — Javier Roma Corrales</h1><p>Cartografía, análisis espacial, datos de campo, ETL y visores. Trabajo con QGIS, PostGIS y Python, y con imagen, fotointerpretación y LiDAR. Desde Madrid, en GIS desde 2010.</p><h2>Encargos</h2><ul><li>Análisis espacial y cartografía</li><li>Datos de campo</li><li>Automatización y ETL</li><li>Visores y cuadros de mando</li><li>Fotointerpretación, fotogrametría y LiDAR</li></ul><p>Necesitas JavaScript para usar el formulario de contacto en este sitio.</p></main></noscript><div id="root"></div></body></html>
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Experto en Desarrollo GIS",
+          "credentialCategory": "certificate",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Esri España"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Colegiado nº 7126",
+          "credentialCategory": "ProfessionalLicense",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Colegio Oficial de Graduados en Ingeniería Forestal"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://oikosgis.com/#service",
+      "name": "OikosGIS",
+      "url": "https://oikosgis.com/",
+      "description": "Data Engineer geoespacial, GIS Madrid. Automatizo, limpio y cargo tus datos GIS con ETL FME y Python, PostGIS y AWS. Trabajo en remoto, en GIS desde 2010.",
+      "provider": {
+        "@id": "https://oikosgis.com/#javier-roma"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Madrid",
+        "addressCountry": "ES"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Remoto"
+      },
+      "availableLanguage": [
+        "es",
+        "en"
+      ],
+      "serviceType": [
+        "Automatización y ETL espacial",
+        "Bases de datos espaciales y nube",
+        "Datos de campo conectados"
+      ]
+    }
+  ]
+}
+    </script>
+    <meta name="oikosgis" content="seo-end"/><link rel="apple-touch-icon" href="/logo192.png"/><link rel="manifest" href="/manifest.json"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet"/><style>#root:not(:empty)~#static-fallback{display:none!important}#static-fallback .site-header{height:auto}#static-fallback .site-header__inner{height:auto;flex-wrap:wrap;padding-top:.75rem;padding-bottom:.75rem}#static-fallback .site-header__menu-btn{display:none!important}#static-fallback .site-nav{display:flex!important;position:static!important;width:100%;background:0 0;border:0;box-shadow:none;padding:0}</style><script defer="defer" src="/static/js/main.4e9b731e.js"></script><link href="/static/css/main.fb63f155.css" rel="stylesheet"></head><body><div id="root"></div><div id="static-fallback">
+      <header class="site-header">
+        <div class="site-header__inner">
+          <a class="site-header__brand" href="#inicio" aria-label="OikosGIS, inicio">
+            <svg class="site-header__mark" viewBox="0 0 32 32" aria-hidden="true">
+              <ellipse cx="15" cy="18.4" rx="12" ry="8.4" />
+              <ellipse cx="16.4" cy="16.8" rx="7.3" ry="5" />
+              <ellipse cx="17.6" cy="15.4" rx="3.1" ry="2.15" />
+              <circle class="site-header__mark-point" cx="18.1" cy="14.8" r="1.35" />
+            </svg>
+            <span class="site-header__word"><span class="site-header__name">Oikos</span><span class="site-header__craft">GIS</span></span>
+          </a>
+          <nav class="site-nav" aria-label="Secciones">
+            <ul>
+              <li><a href="#encargos">Qué hago</a></li>
+              <li><a href="#proyecto">Proyecto</a></li>
+              <li><a href="#como-trabajo">Cómo trabajo</a></li>
+              <li><a href="#herramientas">Herramientas</a></li>
+              <li><a href="#trayectoria">Trayectoria</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="lang-switch">
+              <a href="https://oikosgis.com/" hreflang="es" lang="es" class="is-active" aria-current="true">ES</a>
+              <a href="https://oikosgis.com/en/" hreflang="en" lang="en">EN</a>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <main>
+        <section class="hero" id="inicio">
+          <div class="hero__content">
+            <p class="hero__role">Data Engineer geoespacial</p>
+            <h1 class="hero__heading">Automatizo y ordeno tus datos geoespaciales</h1>
+            <p class="hero__lead">Pipelines ETL con FME y Python, bases de datos PostGIS y datos en la nube (AWS). Para equipos que hoy cargan, convierten o limpian datos a mano. En remoto desde Madrid, en GIS desde 2010.</p>
+            <p class="hero__person">Javier Roma Corrales</p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#contacto">Cuéntame tu caso</a>
+              <a class="btn btn--ghost" href="#proyecto">Ver proyecto</a>
+            </div>
+          </div>
+        </section>
+        <section class="section services" id="encargos">
+          <div class="section__inner">
+            <header class="section__header"><h2>Qué hago</h2></header>
+            <ul class="services__list">
+            <li class="services__card">
+              <h3>Automatización y ETL espacial</h3>
+              <p>Para quien repite cargas o une fuentes a mano.</p>
+              <p class="services__deliverable">Pipelines que descargan, transforman, validan y cargan datos espaciales, con formatos como shapefile, GML, CAD, GeoJSON, GeoPackage y GeoParquet.</p>
+              <p class="services__tools">Herramientas: FME, Python, SQL.</p>
+            </li>
+            <li class="services__card">
+              <h3>Bases de datos espaciales y nube</h3>
+              <p>Para quien necesita una única fuente de datos fiable.</p>
+              <p class="services__deliverable">Diseño y carga de PostGIS con esquemas, índices y control de calidad, y datos en S3 listos para consultar.</p>
+              <p class="services__tools">Herramientas: PostGIS, AWS (S3, Lambda), GeoParquet.</p>
+            </li>
+            <li class="services__card">
+              <h3>Datos de campo conectados</h3>
+              <p>Para quien recoge datos en terreno y los necesita limpios en el sistema.</p>
+              <p class="services__deliverable">Proyectos de QField y Survey123 conectados a la base de datos, con formularios, validaciones y sincronización.</p>
+              <p class="services__tools">Herramientas: QField, QGIS, Survey123, Field Maps.</p>
+            </li>
+            </ul>
+            <p class="services__note">También hago cartografía, visores web y tratamiento de imagen y LiDAR cuando forman parte de un proyecto de datos.</p>
+          </div>
+        </section>
+        <section class="section projects" id="proyecto">
+          <div class="section__inner">
+            <header class="section__header"><h2>Proyecto</h2></header>
+            <article class="projects__card">
+              <div class="projects__body">
+                <h3>spain-flood-exposure: exposición a inundaciones en Valencia</h3>
+                <p>Pipeline en Python y AWS que descarga datos públicos del Catastro y del INE, los guarda en un data lake en S3 y los convierte a GeoParquet para cruzar edificios y población con zonas inundables.</p>
+                <p class="projects__facts">Lambdas de ingesta con permisos mínimos y tests · 266 municipios · 1.830 secciones censales.</p>
+                <a class="btn btn--ghost" href="https://github.com/jaromaco/spain-flood-exposure">Ver spain-flood-exposure en GitHub</a>
+              </div>
+            </article>
+          </div>
+        </section>
+        <section class="section process" id="como-trabajo">
+          <div class="section__inner">
+            <header class="section__header"><h2>Cómo trabajo</h2></header>
+            <ol class="process__steps">
+            <li>
+              <span class="process__num">01</span>
+              <div>
+                <h3>Alcance</h3>
+                <p>Me cuentas qué datos tienes y qué necesitas entregar. Lo dejamos por escrito: qué entra, qué no y el plazo.</p>
+              </div>
+            </li>
+            <li>
+              <span class="process__num">02</span>
+              <div>
+                <h3>Ejecución</h3>
+                <p>Uso las herramientas que encajen con tu entorno. Te enseño avances en los puntos acordados.</p>
+              </div>
+            </li>
+            <li>
+              <span class="process__num">03</span>
+              <div>
+                <h3>Entrega</h3>
+                <p>Recibes los datos, y también los scripts o workspaces de FME documentados, para que el proceso se pueda repetir sin mí.</p>
+              </div>
+            </li>
+            </ol>
+          </div>
+        </section>
+        <section class="section tools" id="herramientas">
+          <div class="section__inner">
+            <header class="section__header">
+              <h2>Herramientas</h2>
+              <p>Me adapto a las herramientas que ya usas.</p>
+            </header>
+            <div class="tools__grid">
+            <div class="tools__group">
+              <h3>Datos y automatización</h3>
+              <ul>
+                <li>FME</li>
+                <li>Python</li>
+                <li>SQL</li>
+                <li>PostGIS</li>
+                <li>GeoPandas</li>
+              </ul>
+            </div>
+            <div class="tools__group">
+              <h3>Nube</h3>
+              <ul>
+                <li>AWS (S3, Lambda, Glue, Athena)</li>
+                <li>GeoParquet</li>
+              </ul>
+            </div>
+            <div class="tools__group">
+              <h3>Escritorio y campo</h3>
+              <ul>
+                <li>QGIS</li>
+                <li>ArcGIS Pro</li>
+                <li>QField</li>
+                <li>Survey123</li>
+                <li>Field Maps</li>
+              </ul>
+            </div>
+            <div class="tools__group">
+              <h3>Web e imagen</h3>
+              <ul>
+                <li>Experience Builder</li>
+                <li>Dashboards</li>
+                <li>teledetección</li>
+                <li>LiDAR</li>
+              </ul>
+            </div>
+            </div>
+          </div>
+        </section>
+        <section class="section path" id="trayectoria">
+          <div class="section__inner">
+            <header class="section__header">
+              <h2>Trayectoria</h2>
+              <p>En GIS desde 2010, cuando empecé con un inventario de especies invasoras en las Azores. Desde entonces he pasado de hacer mapas a automatizar los datos que hay detrás.</p>
+            </header>
+            <ul class="path__roles">
+            <li>
+              <div>
+                <h3>Experto GIS</h3>
+                <p class="path__org">Grupo EULEN</p>
+              </div>
+              <span class="path__note">Actualidad</span>
+            </li>
+            <li>
+              <div>
+                <h3>Analista GIS</h3>
+                <p class="path__org">DOTGIS</p>
+              </div>
+              
+            </li>
+            <li>
+              <div>
+                <h3>Operador fotointérprete</h3>
+                <p class="path__org">Tragsatec</p>
+              </div>
+              
+            </li>
+            <li>
+              <div>
+                <h3>Técnico SIG</h3>
+                <p class="path__org">TECNIGRAL</p>
+              </div>
+              
+            </li>
+            </ul>
+            <p class="path__meta">Máster en SIG (UNIGIS) · Experto en Desarrollo GIS (Esri España) · AWS Certified Data Engineer (en curso) · Colegiado nº 7126, Colegio Oficial de Graduados en Ingeniería Forestal.</p>
+          </div>
+        </section>
+        <section class="section contact" id="contacto">
+          <div class="section__inner contact__inner">
+            <header class="section__header">
+              <h2>Contacto</h2>
+              <p>Cuéntame qué datos tienes, qué quieres conseguir y para cuándo. Trabajo en remoto y respondo por escrito.</p>
+            </header>
+            <ul class="contact__links">
+            <li><a href="https://www.linkedin.com/in/javier-roma-geospatial-engineer" rel="me noreferrer">LinkedIn de Javier Roma Corrales</a></li>
+            <li><a href="https://github.com/jaromaco" rel="me noreferrer">GitHub de jaromaco</a></li>
+            </ul>
+            <p>Necesitas JavaScript para usar el formulario de contacto en este sitio.</p>
+          </div>
+        </section>
+      </main>
+      <footer class="site-footer">
+        <div class="site-footer__inner">
+          <p>© 2026 Javier Roma Corrales · OikosGIS</p>
+          <p>Madrid</p>
+        </div>
+      </footer>
+    </div></body></html>
