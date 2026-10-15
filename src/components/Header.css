@@ -34,7 +34,7 @@
 
 .site-header__mark-slot {
   display: block;
-  width: 2.15rem;
+  width: 1.35rem;
   height: 2.15rem;
   flex: none;
 }
@@ -46,24 +46,19 @@
 }
 
 .site-header__mark-fill {
-  fill: #fffaf4;
+  fill: var(--field);
 }
 
 .site-header__mark-ring {
-  fill: none;
-  stroke: var(--field);
-  stroke-width: 5;
+  fill: #fffaf4;
 }
 
 .site-header__mark-line {
-  stroke: var(--field);
-  stroke-width: 1.05;
-  opacity: 0.88;
+  fill: var(--field);
 }
 
 .site-header__mark-accent {
-  stroke: var(--orange);
-  stroke-width: 1.55;
+  fill: var(--orange);
 }
 
 .site-header__word {
