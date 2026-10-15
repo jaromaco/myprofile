@@ -79,6 +79,11 @@ test('static fallback contains the full copy once per language', () => {
   expect(spanish).toContain('Me adapto a las herramientas que ya usas.');
   expect(spanish).toContain('En GIS desde 2010');
   expect(spanish).toContain('Cuéntame qué datos tienes');
+  expect(spanish).toContain('contact__icon');
+  expect(spanish).toContain('LinkedIn de Javier Roma Corrales');
+  expect(spanish).toContain('GitHub de jaromaco');
+  expect(english).toContain('Javier Roma Corrales on LinkedIn');
+  expect(english).toContain('jaromaco on GitHub');
   expect(spanish).not.toContain('I automate and organise');
   expect(english).toContain('Spatial ETL and automation');
   expect(english).toContain('Spatial databases and cloud');

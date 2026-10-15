@@ -1,3 +1,4 @@
+import { socialIconMarkup } from '../components/socialIcons.js';
 import { PAGE_URL } from './site.js';
 
 function esc(value) {
@@ -57,7 +58,7 @@ ${group.items.map((item) => `                <li>${esc(item)}</li>`).join('\n')}
     .join('\n');
   const contactLinks = t.contact.links
     .map(
-      (link) => `            <li><a href="${esc(link.url)}" rel="${esc(link.rel || 'noopener noreferrer')}">${esc(link.label)}</a></li>`
+      (link) => `            <li><a href="${esc(link.url)}" rel="${esc(link.rel || 'noopener noreferrer')}">${socialIconMarkup(link.icon)}<span class="${link.icon ? 'visually-hidden' : ''}">${esc(link.label)}</span></a></li>`
     )
     .join('\n');
 

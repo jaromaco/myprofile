@@ -147,11 +147,13 @@ const en = {
     formNote: 'JavaScript is required to use the contact form on this site.',
     links: [
       {
+        icon: 'linkedin',
         label: 'Javier Roma Corrales on LinkedIn',
         url: 'https://www.linkedin.com/in/javier-roma-geospatial-engineer',
         rel: 'me noreferrer',
       },
       {
+        icon: 'github',
         label: 'jaromaco on GitHub',
         url: 'https://github.com/jaromaco',
         rel: 'me noreferrer',

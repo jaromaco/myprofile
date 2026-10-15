@@ -147,11 +147,13 @@ const es = {
     formNote: 'Necesitas JavaScript para usar el formulario de contacto en este sitio.',
     links: [
       {
+        icon: 'linkedin',
         label: 'LinkedIn de Javier Roma Corrales',
         url: 'https://www.linkedin.com/in/javier-roma-geospatial-engineer',
         rel: 'me noreferrer',
       },
       {
+        icon: 'github',
         label: 'GitHub de jaromaco',
         url: 'https://github.com/jaromaco',
         rel: 'me noreferrer',
