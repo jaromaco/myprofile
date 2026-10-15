@@ -1,4 +1,3 @@
-import { brandPinSvg } from '../components/brandPin.js';
 import { socialIconMarkup } from '../components/socialIcons.js';
 import { PAGE_URL } from './site.js';
 
