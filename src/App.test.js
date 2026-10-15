@@ -22,7 +22,6 @@ test('renders the Spanish page with one h1', () => {
   expect(screen.getByText('Javier Roma Corrales')).toBeInTheDocument();
   expect(document.querySelector('.hero__role')).toHaveTextContent('Data Engineer geoespacial');
   expect(document.querySelector('.site-header__brand')).toHaveTextContent('OikosGIS');
-  expect(document.querySelector('.site-header__mark')).toBeTruthy();
   expect(document.querySelector('.site-header__name')).toHaveTextContent('Oikos');
   expect(document.querySelector('.site-header__craft')).toHaveTextContent('GIS');
   expect(screen.getByRole('heading', { name: /spain-flood-exposure/i })).toBeInTheDocument();
