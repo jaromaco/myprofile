@@ -88,8 +88,8 @@ export function buildJsonLd(t, lang) {
           addressCountry: 'ES',
         },
         areaServed: {
-          '@type': 'Place',
-          name: lang === 'en' ? 'Remote' : 'Remoto',
+          '@type': 'Country',
+          name: lang === 'en' ? 'Spain' : 'España',
         },
         availableLanguage: ['es', 'en'],
         serviceType: t.services.items.map((item) => item.title),

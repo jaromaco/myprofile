@@ -27,30 +27,43 @@
   text-decoration: none;
 }
 
-.site-header__brand:hover .site-header__name {
-  color: var(--ink);
-}
-
 .site-header__brand:focus-visible {
   outline: 2px solid var(--orange);
   outline-offset: 4px;
 }
 
-.site-header__mark {
-  width: 1.9rem;
-  height: 1.9rem;
+.site-header__mark-slot {
+  display: block;
+  width: 2.15rem;
+  height: 2.15rem;
   flex: none;
-  overflow: visible;
 }
 
-.site-header__mark ellipse {
+.site-header__mark {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.site-header__mark-fill {
+  fill: #fffaf4;
+}
+
+.site-header__mark-ring {
   fill: none;
-  stroke: currentColor;
-  stroke-width: 1.35;
+  stroke: var(--field);
+  stroke-width: 5;
 }
 
-.site-header__mark-point {
-  fill: var(--orange);
+.site-header__mark-line {
+  stroke: var(--field);
+  stroke-width: 1.05;
+  opacity: 0.88;
+}
+
+.site-header__mark-accent {
+  stroke: var(--orange);
+  stroke-width: 1.55;
 }
 
 .site-header__word {
@@ -60,19 +73,18 @@
 }
 
 .site-header__name {
-  font-family: var(--font-serif);
-  font-size: 1.85rem;
-  font-weight: 600;
+  font-family: var(--font-sans);
+  font-size: 1.35rem;
+  font-weight: 700;
   letter-spacing: -0.02em;
+  color: var(--field);
 }
 
 .site-header__craft {
-  margin-left: 0.02rem;
-  margin-right: -0.04em;
   font-family: var(--font-sans);
-  font-size: 1.38rem;
+  font-size: 1.35rem;
   font-weight: 700;
-  letter-spacing: 0.04em;
+  letter-spacing: -0.02em;
   color: var(--orange);
 }
 

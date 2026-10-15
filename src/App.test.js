@@ -22,6 +22,9 @@ test('renders the Spanish page with one h1', () => {
   expect(screen.getByText('Javier Roma Corrales')).toBeInTheDocument();
   expect(document.querySelector('.hero__role')).toHaveTextContent('Data Engineer geoespacial');
   expect(document.querySelector('.site-header__brand')).toHaveTextContent('OikosGIS');
+  expect(document.querySelector('.site-header__mark')).toBeTruthy();
+  expect(document.querySelector('.site-header__name')).toHaveTextContent('Oikos');
+  expect(document.querySelector('.site-header__craft')).toHaveTextContent('GIS');
   expect(screen.getByRole('heading', { name: /spain-flood-exposure/i })).toBeInTheDocument();
   expect(document.documentElement.lang).toBe('es');
   expect(document.title).toBe(es.meta.title);
@@ -56,14 +59,20 @@ test('keeps titles and descriptions inside the SEO length range', () => {
   expect(en.meta.description.length).toBeGreaterThanOrEqual(150);
   expect(en.meta.description.length).toBeLessThanOrEqual(160);
   expect(es.meta.description).toContain('Data Engineer geoespacial');
-  expect(es.meta.description).toContain('ETL FME');
+  expect(es.meta.description).toContain('FME');
+  expect(es.meta.description).toContain('Python');
+  expect(es.meta.description).toContain('QGIS');
   expect(es.meta.description).toContain('PostGIS');
-  expect(es.meta.description).toContain('GIS Madrid');
+  expect(es.meta.description).toContain('AWS');
+  expect(es.meta.description).toContain('Madrid');
   expect(es.meta.description).toContain('remoto');
   expect(en.meta.description).toContain('Geospatial Data Engineer');
   expect(en.meta.description).toContain('FME');
+  expect(en.meta.description).toContain('Python');
+  expect(en.meta.description).toContain('QGIS');
   expect(en.meta.description).toContain('PostGIS');
   expect(en.meta.description).toContain('AWS');
+  expect(en.meta.description).toContain('Madrid');
 });
 
 test('static fallback contains the full copy once per language', () => {
@@ -111,5 +120,8 @@ test('JSON-LD describes the person and the professional service', () => {
   expect(person.knowsAbout).toEqual(expect.arrayContaining(['FME', 'PostGIS', 'GeoPandas']));
   expect(service.serviceType).toHaveLength(3);
   expect(service.address.addressCountry).toBe('ES');
-  expect(buildJsonLd(en, 'en')['@graph'][0].jobTitle).toBe('Geospatial Data Engineer');
+  expect(service.areaServed).toEqual({ '@type': 'Country', name: 'España' });
+  const english = buildJsonLd(en, 'en')['@graph'];
+  expect(english[0].jobTitle).toBe('Geospatial Data Engineer');
+  expect(english[1].areaServed).toEqual({ '@type': 'Country', name: 'Spain' });
 });

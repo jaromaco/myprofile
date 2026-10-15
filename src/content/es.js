@@ -1,8 +1,8 @@
 const es = {
   meta: {
-    title: 'Data Engineer geoespacial — Javier Roma Corrales | OikosGIS',
+    title: 'Data Engineer geoespacial | PostGIS, Python, AWS | OikosGIS',
     description:
-      'Data Engineer geoespacial, GIS Madrid. Automatizo, limpio y cargo tus datos GIS con ETL FME y Python, PostGIS y AWS. Trabajo en remoto, en GIS desde 2010.',
+      'Data Engineer geoespacial en Madrid. Automatizo, limpio y cargo tus datos GIS con FME, Python, QGIS, PostGIS y AWS. Trabajo en remoto, en GIS desde 2010.',
   },
   brand: 'OikosGIS',
   nav: {
@@ -24,7 +24,7 @@ const es = {
     eyebrow: 'Data Engineer geoespacial',
     title: 'Automatizo y ordeno tus datos geoespaciales',
     lead:
-      'Pipelines ETL con FME y Python, bases de datos PostGIS y datos en la nube (AWS). Para equipos que hoy cargan, convierten o limpian datos a mano. En remoto desde Madrid, en GIS desde 2010.',
+      'Pipelines ETL con FME, Python y QGIS, bases de datos PostGIS y datos en la nube (AWS). Para equipos que hoy cargan, convierten o limpian datos a mano. En remoto desde Madrid, en GIS desde 2010.',
     name: 'Javier Roma Corrales',
     cta: 'Cuéntame tu caso',
     projectCta: 'Ver proyecto',

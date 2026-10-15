@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
+import BrandMark from './BrandMark';
 import './Header.css';
 
 export default function Header() {
@@ -30,8 +31,12 @@ export default function Header() {
     <header className="site-header">
       <div className="site-header__inner">
         <a className="site-header__brand" href="#inicio" aria-label={t.nav.home}>
+          <span className="site-header__mark-slot" aria-hidden="true">
+            <BrandMark />
+          </span>
           <span className="site-header__word">
-            <span className="site-header__name">{name}</span>{hasCraft ? <span className="site-header__craft">{craft}</span> : null}
+            <span className="site-header__name">{name}</span>
+            {hasCraft ? <span className="site-header__craft">{craft}</span> : null}
           </span>
         </a>
 

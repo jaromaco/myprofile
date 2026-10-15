@@ -1,3 +1,4 @@
+import { brandPinSvg } from '../components/brandPin.js';
 import { socialIconMarkup } from '../components/socialIcons.js';
 import { PAGE_URL } from './site.js';
 
@@ -66,12 +67,7 @@ ${group.items.map((item) => `                <li>${esc(item)}</li>`).join('\n')}
       <header class="site-header">
         <div class="site-header__inner">
           <a class="site-header__brand" href="#inicio" aria-label="${esc(t.nav.home)}">
-            <svg class="site-header__mark" viewBox="0 0 32 32" aria-hidden="true">
-              <ellipse cx="15" cy="18.4" rx="12" ry="8.4" />
-              <ellipse cx="16.4" cy="16.8" rx="7.3" ry="5" />
-              <ellipse cx="17.6" cy="15.4" rx="3.1" ry="2.15" />
-              <circle class="site-header__mark-point" cx="18.1" cy="14.8" r="1.35" />
-            </svg>
+            <span class="site-header__mark-slot" aria-hidden="true">${brandPinSvg}</span>
             <span class="site-header__word"><span class="site-header__name">Oikos</span><span class="site-header__craft">GIS</span></span>
           </a>
           <nav class="site-nav" aria-label="${lang === 'en' ? 'Sections' : 'Secciones'}">
