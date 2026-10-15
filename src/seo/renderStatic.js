@@ -67,7 +67,6 @@ ${group.items.map((item) => `                <li>${esc(item)}</li>`).join('\n')}
       <header class="site-header">
         <div class="site-header__inner">
           <a class="site-header__brand" href="#inicio" aria-label="${esc(t.nav.home)}">
-            <span class="site-header__mark-slot" aria-hidden="true">${brandPinSvg}</span>
             <span class="site-header__word"><span class="site-header__name">Oikos</span><span class="site-header__craft">GIS</span></span>
           </a>
           <nav class="site-nav" aria-label="${lang === 'en' ? 'Sections' : 'Secciones'}">
